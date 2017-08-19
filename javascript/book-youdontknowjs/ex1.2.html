@@ -1,0 +1,39 @@
+<script>
+  console.log("start");
+  typeof undefined === "undefined"
+  typeof true === "boolean"
+  typeof 42 === "number"
+  typeof "42" === "string"
+  typeof { life: 42 } === "object"
+
+  // ES6부터 추가!
+  typeof Symbol() === "symbol";
+
+  debugger;
+  // console.log 이용
+  console.log(typeof undefined);
+  console.log(typeof undefined === "undefined");
+  console.log(typeof true);
+  console.log(typeof true === "boolean");
+  console.log(typeof 42);
+  console.log(typeof 42 === "number");
+  console.log(typeof "42");
+  console.log(typeof "42" === "string");
+  console.log(typeof { life: 42});
+  console.log(typeof { life: 42 } === "object");
+
+  // ES6부터 추가!
+  console.log(typeof Symbol());
+  console.log(typeof Symbol() === "symbol");
+
+  var i = 3;
+  console.log(i);
+  var j = 5;
+  console.log(j);
+  var x = i + j;
+  console.log(x);
+
+
+
+  console.log("end");
+</script>
