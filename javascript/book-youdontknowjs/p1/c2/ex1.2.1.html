@@ -1,0 +1,58 @@
+<script>
+  var a = [1, "2", [3]];
+
+  a.length;
+  a[0] === 1;
+  a[2][0] === 3;
+
+
+  a[0] = 1;
+  a[1] = "2";
+  a[2] = [3];
+
+  a.length;
+
+
+
+  var a = [];
+  a[0] = 1;
+  a[2] = [3];
+
+  a[1];
+
+  a.length;
+
+
+
+
+  var a = [];
+
+  a[0] = 1;
+  a["foobar"] = 2;
+
+  a.length;
+  a["foobar"];
+  a.foobar;
+
+
+  var a = [];
+  a["13"] = 42;
+  a.length;
+
+
+
+  function foo(){
+    var arr = Array.prototype.slice.call( arguments );
+    arr.push("bam");
+    console.log( arr );
+
+
+  }
+
+  foo( "bar", "baz");
+
+
+  var arr = Array.from(arguments);
+
+
+</script>
