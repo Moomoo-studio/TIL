@@ -18,7 +18,14 @@ import { BComponent } from './b/b.component';
     BrowserModule
   ],
   providers: [
-    OneService
+    {
+      provide: 'one',
+      useClass: OneService
+    },
+    {
+      provide : 'apiUrl',
+      useValue : 'test'
+    }
   ],
   bootstrap: [AppComponent]
 })

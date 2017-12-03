@@ -1,5 +1,5 @@
 import { OneService } from './../one.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-a',
@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AComponent implements OnInit {
 
-  constructor(private one: OneService) {
+  constructor(private one: OneService, @Inject('apiUrl') private apiUrl: string) {
     console.log(one.name);
+    console.log(apiUrl);
   }
 
   ngOnInit() {
