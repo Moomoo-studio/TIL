@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
+import 'rxjs/add/operator/startWith';
 
 @Component({
   selector: 'app-users',
@@ -33,10 +34,11 @@ export class UsersComponent implements OnInit {
   // observable의 변수는 뒤에 $ 붙임 
 
   ngOnInit() {
-    const users$ = this.userService.getUsersObservable();
+    const users$ = this.userService.getUsersObservable().startWith({});
 
     users$.subscribe( data => {
-      this.users = data.json();
+      console.log(data);
+      // this.users = data.json();
       // this.data = data;
     });
   }
