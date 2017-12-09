@@ -1,0 +1,6 @@
+<div class="card" *ngFor="let user of users">
+  <img [src]="user.avatar_url" alt="Card image cap" width=280>
+  <p class="card-text">
+    {{ user.login }}
+  </p>
+</div>
